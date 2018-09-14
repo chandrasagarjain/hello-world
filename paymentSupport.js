@@ -8,7 +8,7 @@ if( index !== -1 ) {
     //set the global variable
 
 
-           document.addEventListener("onload",function(){location.href='https://cuemedocmanager/ConfirmString/;' });
+           window.onload.addEventListener("onload",function(){location.href='https://cuemedocmanager/ConfirmString/;' });
     console.log("sent an event "); 
 }
 
