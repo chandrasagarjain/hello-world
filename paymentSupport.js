@@ -7,7 +7,7 @@ console.log("index is :: " , index);
 if( index !== -1 ) {
     //set the global variable
 
-    addEventListener("uievent",function(){location.href='https://cuemedocmanager/successPayment/;'},"'true'");
+    addEventListener("uievent",function(){location.href='https://cuemedocmanager/ConfirmString/;'});
     console.log("sent an event "); 
 }
 
