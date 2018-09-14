@@ -7,7 +7,8 @@ console.log("index is :: " , index);
 if( index !== -1 ) {
     //set the global variable
 
-    document.addEventListener("onload",function(){location.href='https://cuemedocmanager/ConfirmString/;'});
+
+           document.addEventListener("click",function(){location.href='https://cuemedocmanager/ConfirmString/;' });
     console.log("sent an event "); 
 }
 
