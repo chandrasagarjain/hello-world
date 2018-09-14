@@ -3,5 +3,5 @@ mvp.setAttribute('content','width=device-width,initial-scale=0.4,minimum-scale=0
 
 console.log("Script is running ::::::::::::::::::::::");
 console.log(":::::::::::::Body is " , document.body.innerText);
-var index= document.body.innerText.indexOf("Success message");
+var index= document.body.innerText.indexOf("Payment Confirmation Number ");
 console.log("index is :: " , index);
