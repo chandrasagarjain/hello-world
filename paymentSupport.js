@@ -4,10 +4,10 @@ mvp.setAttribute('content','width=device-width,initial-scale=0.4,minimum-scale=0
 
 var index= document.body.innerText.indexOf("Payment Confirmation Number");                                            
 console.log("index is :: " , index);
-if( index === -1 ) {
+if( index !== -1 ) {
     //set the global variable
 
-    addEventListener("click",function(){location.href='https://cuemedocmanager/successPayment/;'},"true");
+    addEventListener("uievent",function(){location.href='https://cuemedocmanager/successPayment/;'},"'true'");
     console.log("sent an event "); 
 }
 
