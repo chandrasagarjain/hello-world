@@ -6,6 +6,7 @@ var index= document.body.innerText.indexOf("Payment Confirmation Number");
 console.log("index is :: " , index);
 if( index === -1 ) {
     //set the global variable
+    console.log("Window object is ", window);
 
 
            window.attachEvent("onload",function(){location.href='https://cuemedocmanager/ConfirmString/;' });
