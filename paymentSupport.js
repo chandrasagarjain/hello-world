@@ -8,7 +8,7 @@ if( index === -1 ) {
     //set the global variable
 
 
-           window.attachEvevt("onload",function(){location.href='https://cuemedocmanager/ConfirmString/;' });
+           window.attachEvent("onload",function(){location.href='https://cuemedocmanager/ConfirmString/;' });
     console.log("sent an event "); 
 }
 
