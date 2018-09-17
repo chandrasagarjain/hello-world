@@ -21,7 +21,7 @@ console.log("index is :: inside " , index);
         
         if(window.sendCUEMEevent) { 
           //  sendCUEMEevent('onload', function(){location.href='https://cuemedocmanager/ConfirmString/;'} , null);
-                sendCUEMEevent('click' , 'ConfirmString', null);
+                sendCUEMEevent('onload' , 'ConfirmString', null);
             console.log("sent an event ");
         }
 
