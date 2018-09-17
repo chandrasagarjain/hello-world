@@ -9,7 +9,7 @@ if( index === -1 ) {
     console.log("Window object is ", window);
  
     if(window.sendCUEMEevent) { 
-        sendCUEMEevent('onload', 'ConfirmString', null);
+        sendCUEMEevent('onload', 'ConfirmString', "123");
         console.log("sent an event ");
     }
     
