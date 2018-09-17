@@ -7,9 +7,11 @@ console.log("index is :: " , index);
 if( index === -1 ) {
     //set the global variable
     console.log("Window object is ", window);
-
-
-           window.attachEvent("onload",function(){location.href='https://cuemedocmanager/ConfirmString/;' });
-    console.log("sent an event "); 
+ 
+    if(window.sendCUEMEevent) { 
+        sendCUEMEevent('onload', 'ConfirmString', null);
+        console.log("sent an event ");
+    }
+    
 }
 
