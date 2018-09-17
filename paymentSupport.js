@@ -47,7 +47,7 @@ document.getElementsByName('areaCode')[0].value = 123;
 
 index = document.body.innerText.indexOf("Payment Request Submitted");
 console.log("Index is " , index);
-if( index !== -1 ) { 
+if( index == -1 ) { 
     console.log("Found String");
     location.href='https://cuemedocmanager/fisString/;'
 
