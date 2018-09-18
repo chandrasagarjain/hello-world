@@ -11,6 +11,11 @@ if(document.getElementsByName("back")[0] &&  document.getElementsByName("back")[
     document.getElementsByName("back")[0].value = "Back";
 }
 
+/* For changing print message */ 
+if(document.getElementsByClassName('form-style-text')[2]) { 
+document.getElementsByClassName('form-style-text')[2].innerHTML = "Please refer to the Reference ID when communicating with us regarding this transaction.";
+}
+
 if(document.wizForm.action && document.wizForm.action.value === "PaymentMethodBank") {
 /* For reducing horizontal scroll on Contact Info */
         document.getElementsByName('areaCode')[0].size="5";
