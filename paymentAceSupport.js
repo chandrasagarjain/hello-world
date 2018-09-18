@@ -1,13 +1,14 @@
 /* For setting view mode settings */
 var mvp = document.getElementById('myViewport');
 mvp.setAttribute('content','viewport-fit=cover, width=device-width');
+console.log("Back is " , )
 
 /*Two URLs for invocation*/
 var ACH_URL = 'https://policycenter.aceprivateriskservices.com/billing/terms_ACH_Debits.cfm';
 var TNC_URL = 'https://www2.chubb.com/us-en/terms-of-use.aspx';
 
 /*For reducing width of button on 1A page One Time Bill Payment */
-if(document.getElementsByName("back") &&  document.getElementsByName("back")[0].value === "Back to payment information") {
+if(document.getElementsByName("back")[0] &&  document.getElementsByName("back")[0].value === "Back to payment information") {
     document.getElementsByName("back")[0].value = "Back";
 }
 
