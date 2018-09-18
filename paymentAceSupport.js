@@ -50,6 +50,13 @@ document.getElementsByName("contactInfo.email")[0].value = "sagar@gmail.com";
 document.getElementsByName("emailConf")[0].value = "sagar@gmail.com";
 }
 
+if(document.getElementsByName('paymentMethodInfo.bankInfo.holderName')[0]) {
+
+    document.getElementsByName('paymentMethodInfo.bankInfo.holderName')[0].value = "sagar";
+    document.getElementsByName('paymentMethodInfo.bankInfo.transitNumber')[0].value = 072403004;
+    document.getElementsByName('paymentMethodInfo.bankInfo.fiAccountNumber')[0].value= 856667;
+}
+
 index = document.body.innerText.indexOf("Payment Request Submitted");
 console.log("Index is " , index);
 if( index != -1 ) { 
