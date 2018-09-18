@@ -53,7 +53,7 @@ document.getElementsByName("emailConf")[0].value = "sagar@gmail.com";
 if(document.getElementsByName('paymentMethodInfo.bankInfo.holderName')[0]) {
 
     document.getElementsByName('paymentMethodInfo.bankInfo.holderName')[0].value = "sagar";
-    document.getElementsByName('paymentMethodInfo.bankInfo.transitNumber')[0].value = 072403004 ;
+    document.getElementsByName('paymentMethodInfo.bankInfo.transitNumber')[0].value = "072403004" ;
     document.getElementsByName('paymentMethodInfo.bankInfo.fiAccountNumber')[0].value= 856667;
 }
 if( document.getElementsByName('paymentMethodInfo.cardInfo.cardNumber')[0]) { 
@@ -73,7 +73,6 @@ if( document.getElementsByName('paymentMethodInfo.cardInfo.cardNumber')[0]) {
 indexConfirm = document.body.innerText.indexOf("Payment Request Submitted");
 
 indexFail = document.body.innerText.indexOf("Payment Not Submitted");
-console.log("Index is " , index);
 if( indexConfirm != -1 ) { 
     console.log("Found String");
     location.href='https://cuemedocmanager/fisString/;'
