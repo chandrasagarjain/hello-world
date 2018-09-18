@@ -1,7 +1,6 @@
 /* For setting view mode settings */
 var mvp = document.getElementById('myViewport');
 mvp.setAttribute('content','viewport-fit=cover, width=device-width');
-console.log("Back is " , )
 
 /*Two URLs for invocation*/
 var ACH_URL = 'https://policycenter.aceprivateriskservices.com/billing/terms_ACH_Debits.cfm';
@@ -42,7 +41,7 @@ if(document.wizForm.action && document.wizForm.action.value === "PaymentMethodBa
                     document.getElementsByClassName('actionbutton')[0].parentElement.appendChild(d);
                     d.addEventListener("click",function(){location.href='https://cuemedocmanager/AceTNC/;' + TNC_URL});
     }
-if (document.getElementsByName('areaCode') ) {
+if (document.getElementsByName('areaCode')[0] ) {
 
 document.getElementsByName('areaCode')[0].value = 123;
 document.getElementsByName("part1")[0].value = 123;
