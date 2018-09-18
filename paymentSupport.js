@@ -8,6 +8,7 @@ var indexFail = document.body.innerText.indexOf("An error occurred while creatin
         location.href = 'https://cuemedocmanager/bnyString/;'
     }
     if (indexFail !== -1) {
+        console.log("Found Unsuccess  String");
         location.href = 'https://cuemedocmanager/bnyFailString/;'
     }
 
