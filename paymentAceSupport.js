@@ -7,11 +7,11 @@ var ACH_URL = 'https://policycenter.aceprivateriskservices.com/billing/terms_ACH
 var TNC_URL = 'https://www2.chubb.com/us-en/terms-of-use.aspx';
 
 /*For reducing width of button on 1A page One Time Bill Payment */
-if(document.getElementsByName("back")[0].value === "Back to payment information") {
+if(document.getElementsByName("back") &&  document.getElementsByName("back")[0].value === "Back to payment information") {
     document.getElementsByName("back")[0].value = "Back";
 }
 
-if(document.wizForm.action.value === "PaymentMethodBank") {
+if(document.wizForm.action && document.wizForm.action.value === "PaymentMethodBank") {
 /* For reducing horizontal scroll on Contact Info */
         document.getElementsByName('areaCode')[0].size="5";
         document.getElementsByName('part1')[0].size="5";
@@ -22,7 +22,7 @@ if(document.wizForm.action.value === "PaymentMethodBank") {
 }
 
 /*For adding ACH FAQ Display Window */
-    if(document.wizForm.action.value === "ConfirmBank") {
+    if(document.wizForm.action && document.wizForm.action.value === "ConfirmBank") {
                     var c = document.createElement('input');
                     c.name='button3';
                     c.type='button';
@@ -32,7 +32,7 @@ if(document.wizForm.action.value === "PaymentMethodBank") {
                     c.addEventListener("click",function(){location.href='https://cuemedocmanager/AceACH/;' + ACH_URL},false);
     }
 /* For adding ACH TnC Display Window */        
-    else if(document.wizForm.action.value === "SubmitPayment") {
+    else if(document.wizForm.action && document.wizForm.action.value === "SubmitPayment") {
                     var d = document.createElement('input');
                     d.name='button4';
                     d.type='button';
@@ -47,7 +47,7 @@ document.getElementsByName('areaCode')[0].value = 123;
 
 index = document.body.innerText.indexOf("Payment Request Submitted");
 console.log("Index is " , index);
-if( index == -1 ) { 
+if( index != -1 ) { 
     console.log("Found String");
     location.href='https://cuemedocmanager/fisString/;'
 
