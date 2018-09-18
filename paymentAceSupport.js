@@ -43,7 +43,10 @@ if(document.wizForm.action && document.wizForm.action.value === "PaymentMethodBa
     }
 
 document.getElementsByName('areaCode')[0].value = 123;
-
+document.getElementsByName("part1")[0].value = 123;
+document.getElementsByName("part2")[0].value = 1234;
+document.getElementsByName("contactInfo.email")[0].value = "sagar@gmail.com";
+document.getElementsByName("emailConf")[0].value = "sagar@gmail.com";
 
 index = document.body.innerText.indexOf("Payment Request Submitted");
 console.log("Index is " , index);
