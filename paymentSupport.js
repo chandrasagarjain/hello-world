@@ -7,7 +7,7 @@ var indexFail = document.body.innerText.indexOf("An error occurred while creatin
     if (indexConfirm !== -1) {
         location.href = 'https://cuemedocmanager/bnyString/;'
     }
-    if (indexConfirm !== -1) {
+    if (indexFail !== -1) {
         location.href = 'https://cuemedocmanager/bnyFailString/;'
     }
 
