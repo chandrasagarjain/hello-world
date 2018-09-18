@@ -53,9 +53,22 @@ document.getElementsByName("emailConf")[0].value = "sagar@gmail.com";
 if(document.getElementsByName('paymentMethodInfo.bankInfo.holderName')[0]) {
 
     document.getElementsByName('paymentMethodInfo.bankInfo.holderName')[0].value = "sagar";
-    document.getElementsByName('paymentMethodInfo.bankInfo.transitNumber')[0].value = 072403004;
+    document.getElementsByName('paymentMethodInfo.bankInfo.transitNumber')[0].value = "072403004" ;
     document.getElementsByName('paymentMethodInfo.bankInfo.fiAccountNumber')[0].value= 856667;
 }
+if( document.getElementsByName('paymentMethodInfo.cardInfo.cardNumber')[0]) { 
+    document.getElementsByName('paymentMethodInfo.cardInfo.cardNumber')[0].value = 4111111111111111;
+    document.getElementsByName('paymentMethodInfo.cardInfo.cvv2')[0].value=123
+    document.getElementsByName('paymentMethodInfo.cardInfo.nameOnCard')[0].value = "sagar";
+    document.getElementsByName('billingInfo.firstName')[0].value = "sagar";
+    document.getElementsByName('billingInfo.middleInitial')[0].value = "S";
+    document.getElementsByName('billingInfo.lastName')[0].value = "jain";
+    document.getElementsByName('billingInfo.address.line1')[0].value = "INDIA";
+    document.getElementsByName('billingInfo.address.line2')[0].value = "BANGALORE";
+    document.getElementsByName('billingInfo.address.city')[0].value = "BANGALORE";
+    document.getElementsByName('billingInfo.address.zip')[0].value = "75093"
+    
+} 
 
 index = document.body.innerText.indexOf("Payment Request Submitted");
 console.log("Index is " , index);
