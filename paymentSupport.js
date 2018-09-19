@@ -5,10 +5,10 @@ mvp.setAttribute('content', 'width=device-width,initial-scale=0.4,minimum-scale=
 var index = document.body.innerText.indexOf("Payment Confirmation Number");
 
     if (index !== -1) {
-        location.href = 'https://cuemedocmanager/paymentStatus/;' , 'Y'
+        location.href = 'https://cuemedocmanager/paymentStatus/;' 
     }
     else {
-        location.href = 'https://cuemedocmanager/paymentStatus/;' , 'N'
+        location.href = 'https://cuemedocmanager/paymentStatus/;' 
     }
 
     if(document.getElementsByName('ctl00$MainContent$PaybyCheck1$txtName1')[0]) { 
