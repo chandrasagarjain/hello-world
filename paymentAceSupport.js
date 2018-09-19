@@ -74,7 +74,7 @@ if( document.getElementsByName('paymentMethodInfo.cardInfo.cardNumber')[0]) {
     document.getElementsByName('billingInfo.address.zip')[0].value = "75093"
     
 } 
-// if (document.wizForm.action.value == "ClearBean") { 
+if (document.wizForm.action.value == "ClearBean") { 
 index = document.body.innerText.indexOf("Payment Request Submitted");
 if( index != -1 ) { 
     console.log(":::::::::Found String");
@@ -84,4 +84,4 @@ if( index != -1 ) {
 location.href='https://cuemedocmanager/paymentStatus/;' + 'N'
         }
 
-// }
+}
