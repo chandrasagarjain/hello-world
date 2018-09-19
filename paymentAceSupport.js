@@ -78,9 +78,10 @@ if( document.getElementsByName('paymentMethodInfo.cardInfo.cardNumber')[0]) {
 index = document.body.innerText.indexOf("Payment Request Submitted");
 if( index != -1 ) { 
     console.log(":::::::::Found String");
-    location.href='https://cuemedocmanager/paymentStatus/;' , 'Y'
+    location.href=('https://cuemedocmanager/paymentStatus/;') , 'Y'
 
 } else { console.log("::::::::::::::::DID NOT  String");
-location.href='https://cuemedocmanager/paymentStatus/;' , 'N' }
+location.href=('https://cuemedocmanager/paymentStatus/;') , 'N'
+        }
 
 // }
