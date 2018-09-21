@@ -2,16 +2,15 @@ var mvp = document.getElementById('myViewport');
 mvp.setAttribute('content', 'width=device-width,initial-scale=0.4,minimum-scale=0.4,maximum-scale=0.4,user-scalable=no');
 
 /* To get the status of payment */
-if(document.forms[0] && document.forms[0].action.includes("PaymentConfirmation.aspx")) { 
+if (document.forms[0] && document.forms[0].action.includes("PaymentConfirmation.aspx")) {
+    document.getElementById("MainContent_PaymentConfirmation1_pnlpnlEmailOrPrint").style.display = "none"; //Hides the print button 
+    var index = document.body.innerText.indexOf("Payment Confirmation Number");
+    if (index !== -1) {
+        location.href = 'https://cuemedocmanager/paymentStatus/;' + 'Y'
+    } else {
+        location.href = 'https://cuemedocmanager/paymentStatus/;' + 'N'
+    }
 
-
-var index = document.body.innerText.indexOf("Payment Confirmation Number");
-
-if (index !== -1) {
-    location.href = 'https://cuemedocmanager/paymentStatus/;' + 'Y'
-}
-else {
-    location.href = 'https://cuemedocmanager/paymentStatus/;' + 'N'
 }
 
 if (document.getElementsByName('ctl00$MainContent$PaybyCheck1$txtName1')[0]) {
