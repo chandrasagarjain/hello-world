@@ -73,15 +73,17 @@ if( document.getElementsByName('paymentMethodInfo.cardInfo.cardNumber')[0]) {
     document.getElementsByName('billingInfo.address.city')[0].value = "BANGALORE";
     document.getElementsByName('billingInfo.address.zip')[0].value = "75093"
     
-} 
-if (document.wizForm.action.value == "ClearBean") { 
-index = document.body.innerText.indexOf("Payment Request Submitted");
-if( index != -1 ) { 
-    console.log(":::::::::Found String");
-    location.href='https://cuemedocmanager/paymentStatus/;' + 'Y'
+} else if (document.wizForm.action.value === "ClearBean") { 
+    /* Disable print button */
+    if (document.getElementsByClassName("form-style-text")[2]) {
+        document.getElementsByClassName("form-style-text")[2].style.display = "none";
+    }
 
-} else { console.log("::::::::::::::::DID NOT  String");
-location.href='https://cuemedocmanager/paymentStatus/;' + 'N'
-        }
-
-}
+    /* To get the status of Payment */
+    index = document.body.innerText.indexOf("Payment Request Submitted");
+    if (index != -1) {
+        location.href = 'https://cuemedocmanager/paymentStatus/;' + 'Y'
+    } else {
+        location.href = 'https://cuemedocmanager/paymentStatus/;' + 'N'
+    }
+  }
