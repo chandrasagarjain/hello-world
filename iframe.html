@@ -1,0 +1,8 @@
+<script>
+        function onClick() {
+            parent.HelloFromChild(document.getElementById("name").value);
+        }
+</script>
+Iframe page
+<input type="text" name="name" value="techie" id="name" />
+<button onclick="onClick();">Call Parent Window Function</button>
