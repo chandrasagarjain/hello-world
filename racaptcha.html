@@ -4,6 +4,7 @@
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <script>
         function myFunction() {
+          alert("submit clicked")
           var data = { foo: 'bar' }
           var event = new CustomEvent('myCustomEvent', { detail: data })
           window.parent.document.dispatchEvent(event)
