@@ -1,6 +1,6 @@
 <script>
         function onClick() {
-            window.parent.HelloFromChild(document.getElementById("name").value);
+            window.parent.postMessage("Hello" , "*")
         }
 </script>
 Iframe page
