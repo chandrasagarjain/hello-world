@@ -1,18 +1,16 @@
 <html>
   <head>
-    <title>reCAPTCHA demo: Simple page</title>
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <script>
         function myFunction(response) {
           alert("submit clicked" + response)
-window.parent.postMessage("Hello" , "*")
+          window.parent.postMessage("Hello" , "*")
         }
         </script>
   </head>
   <body>
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY" data-callback="myFunction($event)"></div>
-      <br/>
     </form>
   </body>
 </html>
