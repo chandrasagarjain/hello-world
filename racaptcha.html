@@ -2,12 +2,19 @@
   <head>
     <title>reCAPTCHA demo: Simple page</title>
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <script>
+        function myFunction() {
+          var data = { foo: 'bar' }
+          var event = new CustomEvent('myCustomEvent', { detail: data })
+          window.parent.document.dispatchEvent(event)
+        }
+        </script>
   </head>
   <body>
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY"></div>
       <br/>
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" onclick="myFunction()">
     </form>
   </body>
 </html>
