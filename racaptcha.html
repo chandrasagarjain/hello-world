@@ -5,9 +5,14 @@
       <script>
         function myFunction() {
           alert("submit clicked")
-          var data = { foo: 'bar' }
-          var event = new CustomEvent('myCustomEvent', { detail: data })
-          window.parent.document.dispatchEvent(event)
+        // addEventListener support for IE8
+        function bindEvent(element, eventName, eventHandler) {
+            if (element.addEventListener) {
+                element.addEventListener(eventName, eventHandler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + eventName, eventHandler);
+            }
+        }
         }
         </script>
   </head>
