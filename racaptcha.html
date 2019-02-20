@@ -6,13 +6,7 @@
         function myFunction() {
           alert("submit clicked")
         // addEventListener support for IE8
-        function bindEvent(element, eventName, eventHandler) {
-            if (element.addEventListener) {
-                element.addEventListener(eventName, eventHandler, false);
-            } else if (element.attachEvent) {
-                element.attachEvent('on' + eventName, eventHandler);
-            }
-        }
+        window.parent.postMessage(msg, 'Actual mesage from Iframe');
         }
         </script>
   </head>
@@ -20,7 +14,7 @@
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY"></div>
       <br/>
-      <input type="submit" value="Submit" onclick="myFunction()">
+      <input type="submit" style="padding-top:10rem;" value="Submit" onclick="myFunction()">
     </form>
   </body>
 </html>
