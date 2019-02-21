@@ -1,13 +1,22 @@
 <html>
   <head>
-  <script src="https://www.google.com/recaptcha/api.js?render=6Lc1fo8UAAAAAFaC81NxYwXkaYnPQmxZJDiROghQ"></script>
-  <script>
-  grecaptcha.ready(function() {
-      grecaptcha.execute('6Lc1fo8UAAAAAFaC81NxYwXkaYnPQmxZJDiROghQ', {action: 'homepage'}).then(function(token) {
-         
-        window.parent.postMessage(token , "*")
-      });
-  });
-  </script>
+    <title>reCAPTCHA demo: Simple page</title>
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("demo-form").submit();
+       }
+       window.onload = function() {
+        var submitBtn = document.getElementById("submit-btn");
+        submitBtn.click()
+       }
+       
+     </script>
   </head>
-</html> 
+  <body>
+    <form id='demo-form' action="?" method="POST">
+      <button class="g-recaptcha" id="submit-btn" data-sitekey="6LfA6ZIUAAAAAIQtjkV9jiGJYuyHHKStsaU1jYzg" data-callback='onSubmit'>Submit</button>
+      <br/>
+    </form>
+  </body>
+</html>
