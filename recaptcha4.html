@@ -4,7 +4,8 @@
   <script>
   grecaptcha.ready(function() {
       grecaptcha.execute('6Lc1fo8UAAAAAFaC81NxYwXkaYnPQmxZJDiROghQ', {action: 'homepage'}).then(function(token) {
-         alert('token:' + token)
+         
+        window.parent.postMessage(token , "*")
       });
   });
   </script>
