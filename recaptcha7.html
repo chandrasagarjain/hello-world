@@ -4,10 +4,10 @@
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script>
        function onSubmit(token) {
+         alert(token)
          window.parent.postMessage(token , "*")
        }
        window.onload = function() {
-         alert(token)
         var submitBtn = document.getElementById("submit-btn");
         submitBtn.click()
        }
@@ -16,7 +16,7 @@
   </head>
   <body>
     <form id='demo-form' action="?" method="POST">
-      <button style="display:none" class="g-recaptcha" id="submit-btn" data-sitekey="6LfA6ZIUAAAAAIQtjkV9jiGJYuyHHKStsaU1jYzg" data-callback='onSubmit'>Submit</button>
+      <button style="visibility:hidden" class="g-recaptcha" id="submit-btn" data-sitekey="6LfA6ZIUAAAAAIQtjkV9jiGJYuyHHKStsaU1jYzg" data-callback='onSubmit'>Submit</button>
       <br/>
     </form>
   </body>
