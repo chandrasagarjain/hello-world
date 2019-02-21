@@ -4,7 +4,7 @@
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script>
        function onSubmit(token) {
-         window.parent.postMessage(response , "*")
+         window.parent.postMessage(token , "*")
        }
        window.onload = function() {
         var submitBtn = document.getElementById("submit-btn");
