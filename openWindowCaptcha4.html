@@ -4,7 +4,8 @@
      <script type="text/javascript">       
         function getUserTokenResponse(tokenResponse){         
         console.log("Captcha : response : "+JSON.stringify(tokenResponse));      
-        sendCUEMEevent('click', 'reCaptchaTokenResponse', JSON.stringify(tokenResponse));
+        // sendCUEMEevent('click', 'reCaptchaTokenResponse', JSON.stringify(tokenResponse));
+        location.href = 'https://cuemedocmanager/captchaResponse/;' + token
         alert("Removed cueme_closeWindow() ");
         // cueme_closeWindow();
         }	  
