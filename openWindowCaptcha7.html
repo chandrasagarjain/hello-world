@@ -2,7 +2,7 @@
   <head>
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script type="text/javascript">       
-        function getUserTokenResponse(tokenResponse){         
+        function captchaResponse(tokenResponse){         
           alert("Received token" + tokenResponse);
         sendCUEMEevent('click', 'captchaResponse', tokenResponse);
         // location.href = 'https://cuemedocmanager/captchaResponse/;' + token
@@ -11,6 +11,6 @@
       </script>
   </head>
   <body>
-      <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY" data-callback="getUserTokenResponse"></div>
+      <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY" data-callback="captchaResponse"></div>
   </body>
 </html>
