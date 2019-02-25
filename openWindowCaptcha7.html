@@ -2,8 +2,7 @@
   <head>
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script type="text/javascript">       
-        function captchaResponse(tokenResponse){         
-          alert("Received token" + tokenResponse);
+        function captchaResponse(tokenResponse){
         sendCUEMEevent('click', 'captchaResponse', tokenResponse);
         // location.href = 'https://cuemedocmanager/captchaResponse/;' + token
         cueme_closeWindow();
