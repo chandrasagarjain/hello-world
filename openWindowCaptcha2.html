@@ -3,6 +3,7 @@
      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
      <script type="text/javascript">       
         function getUserTokenResponse(tokenResponse){
+         
         console.log("Captcha : response : "+JSON.stringify(tokenResponse));      
         sendCUEMEevent('click', 'reCaptchaTokenResponse', JSON.stringify(tokenResponse));
         cueme_closeWindow();
