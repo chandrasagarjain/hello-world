@@ -1,32 +1,15 @@
-
 <html>
   <head>
-    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
-    <script type="text/javascript">
-      var captcha_widge_id = null;
-      var onloadCallback = function() {
-        captcha_widge_id = grecaptcha.render('html_element', {
-          'sitekey' : '6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY'
-        });
-      };
-	  
-	  function getUserTokenResponse(){
-      var tokenResponse = grecaptcha.getResponse(
-          captcha_widge_id
-        );
-      console.log("Captcha : response : "+JSON.stringify(tokenResponse));      
-      sendCUEMEevent('click', 'reCaptchaTokenResponse', JSON.stringify(tokenResponse));
-      cueme_closeWindow();
-	  }	  
-    </script>
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script type="text/javascript">       
+        function getUserTokenResponse(tokenResponse){
+        console.log("Captcha : response : "+JSON.stringify(tokenResponse));      
+        sendCUEMEevent('click', 'reCaptchaTokenResponse', JSON.stringify(tokenResponse));
+        cueme_closeWindow();
+        }	  
+      </script>
   </head>
-  <body>    
-      <div>reCAPTCHA demo</div>
-      <div id="html_element"></div>
-      <br>      
-      <input type="button" value="Finish" onclick="getUserTokenResponse()">
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
+  <body>
+      <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY" data-callback="getUserTokenResponse"></div>
   </body>
 </html>
