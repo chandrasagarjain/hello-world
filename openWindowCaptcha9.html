@@ -6,18 +6,25 @@
         function captchaResponse(tokenResponse){
         sendCUEMEevent('click', 'captchaResponse', tokenResponse);
         // location.href = 'https://cuemedocmanager/captchaResponse/;' + token
-        cueme_closeWindow();
+        // cueme_closeWindow();
         }	  
       </script>
   </head>
   <body>
       <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY" data-callback="captchaResponse"></div>
+      <div class="cancel" onclick="cancel"> Cancel</div>
   </body>
   <style> 
   .g-recaptcha{
     position: absolute;
     top: 15%;
     left: 3%;
+    }
+    .cancel {
+        color:#01C1D6;
+        position: absolute;
+        top: 15%;
+        left: 3%;
     }
   </style>
 </html>
