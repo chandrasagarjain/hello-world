@@ -1,33 +1,42 @@
 <html>
-  <head>
-    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script type="text/javascript">       
-        function captchaResponse(tokenResponse){
-        sendCUEMEevent('click', 'captchaResponse', tokenResponse);
-        }	  
-       function cancel() {
-       cueme_closeWindow();
+
+<head>
+    <meta name="viewport"
+        content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+        function captchaResponse(tokenResponse) {
+            sendCUEMEevent('click', 'captchaResponse', tokenResponse);
         }
-      </script>
-  </head>
-  <body>
-      <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY" data-callback="captchaResponse"></div>
-      <div class="cancel" onclick="cancel()"> Cancel</div>
-  </body>
-  <style> 
-  .g-recaptcha{
-    position: absolute;
-    top: 15%;
-    left: 3%;
+        function cancel() {
+            cueme_closeWindow();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="recaptcha-wrapper">
+        <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY"
+            data-callback="captchaResponse"></div>
+        <div class="cancel" onclick="cancel()"> Cancel</div>
+    </div>
+</body>
+<style>
+    .recaptcha-wrapper {
+        text-align: center;
     }
+
+    .g-recaptcha {
+        display: inline-block;
+        margin-top: 10rem;
+    }
+
     .cancel {
-        color:#4B4E52;
-        font-size:1.6rem;
+        color: #4B4E52;
+        font-size: 1.6rem;
         text-decoration: underline;
-        position: absolute;
-        top: 30%;
-        left: 15%;
+        margin-top: 2rem;
     }
-  </style>
+</style>
+
 </html>
