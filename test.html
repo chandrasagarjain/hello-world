@@ -4,39 +4,31 @@
     <meta name="viewport"
         content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="text/javascript">
-        function captchaResponse(tokenResponse) {
-            sendCUEMEevent('click', 'captchaResponse', tokenResponse);
-        }
-        function cancel() {
-            cueme_closeWindow();
-        }
+    <script src="https://github.com/chandrasagarjain/Prod/blob/master/recaptcha.js">
+
     </script>
+    <link rel="stylesheet" type="text/css" href="https://github.com/chandrasagarjain/Prod/blob/master/recaptcha.css">
 </head>
 
 <body>
-    <div class="recaptcha-wrapper">
-        <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY"
-            data-callback="captchaResponse"></div>
-        <div class="cancel" onclick="cancel()"> Cancel</div>
+    <div id="content-wrapper">
+        <div class="chubb-logo">
+            <img alt="CHUBB" class="header-logo" src="https://rooftopview.000webhostapp.com/prs/reg/cb.png" />
+        </div>
+        <div class="registration-top-image">
+            <img class="reg-image" src="https://rooftopview.000webhostapp.com/prs/reg/mobile.jpg" />
+            <img class="user-logo" src="https://rooftopview.000webhostapp.com/prs/reg/User_Circle_Outline_Teal.svg" />
+        </div>
+        <div class="recaptcha-container">
+            <div class="g-recaptcha" data-sitekey="6Lc6PY8UAAAAAOdWnJ7PdPxeyxXKbExrBMRKgXxY"
+                data-callback="captchaResponse"></div>
+            <div class="cancel" onclick="cancel()">
+                <span class="cancel-label"> Cancel </span> </div>
+        </div>
+    </div>
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
     </div>
 </body>
-<style>
-    .recaptcha-wrapper {
-        text-align: center;
-    }
-
-    .g-recaptcha {
-        display: inline-block;
-        margin-top: 10rem;
-    }
-
-    .cancel {
-        color: #4B4E52;
-        font-size: 1.6rem;
-        text-decoration: underline;
-        margin-top: 2rem;
-    }
-</style>
 
 </html>
